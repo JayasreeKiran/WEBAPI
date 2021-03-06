@@ -57,8 +57,7 @@ namespace WEBAPI.Business
                     using (StreamReader reader = new StreamReader(stream))
                     {
                         string json = reader.ReadToEnd();
-                        var obj = JObject.Parse(json);
-                        JavaScriptSerializer json_serializer = new JavaScriptSerializer();
+                        var obj = JObject.Parse(json);                        
                         
                         foreach (var innerObj in obj["listings"])
                         {
